@@ -17,7 +17,7 @@ class ConcertsController < ApplicationController
   # GET /concerts/1 or /concerts/1.json
   def show
     if params[:inline]
-      render(@concerts)
+      render(@concert)
     end
   end
 
