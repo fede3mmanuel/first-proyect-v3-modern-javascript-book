@@ -4,8 +4,8 @@
       <div class="text-red-500 border-red-800 font-bold border-2 p-2 mb-2">
         <%= f.error_notification %>
         <%= f.error_notification(
-          message = f.object.errors.full_messages.to_sentence
-        )%>
+              message: f.object.errors.full_messages.to_sentence
+            ) %>
       </div>
     <% end %>
     <article class="my-4">
