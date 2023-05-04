@@ -7,7 +7,6 @@
 # Visit https://pragprog.com/titles/nrclient2 for more book information.
 #---
 class FavoritesController < ApplicationController
-
   def index
   end
 

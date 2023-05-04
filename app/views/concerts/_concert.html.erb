@@ -1,5 +1,5 @@
 <%= turbo_frame_tag(dom_id(concert)) do %>
-<article class="my-4">
+  <article class="my-4">
     <div class="grid gap-4 grid-cols-5">
       <div class="col-span-1 text-xl">
         <%= concert.start_time.by_example("3:04 PM") %>
@@ -7,7 +7,11 @@
       <div class="col-span-3">
         <div class="name">
           <div class="text-lg font-bold">
-            <%= link_to(concert.name,concert,data: {"turbo-frame": "_top"}) %>
+            <%= link_to(
+                  concert.name,
+                  concert,
+                  data: {"turbo-frame": "_top"}
+                ) %>
           </div>
         </div>
         <div class="bands">
@@ -49,7 +53,7 @@
                     "Favorite",
                     favorites_path(concert_id: concert.id),
                     method: "post",
-                    form: {data: {"turbo-frame": "favorite-concerts"}}
+                    form: {data: {"turbo-frame": "favorite-concerts"}},
                     class: SimpleForm.button_class
                   ) %>
             <% end %>
